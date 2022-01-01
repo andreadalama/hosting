@@ -1,0 +1,821 @@
+ -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Benton Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+a:hover, a:focus, a:active {
+  text-decoration: none;
+  outline: none;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+small {
+  font-size: 80%;
+}
+
+img {
+  border: 0;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 0;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+}
+
+ul, li {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+ol li {
+  list-style-type: decimal;
+}
+
+p {
+  line-height: 1em;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+  FUENTES
+*/
+
+@font-face { font-family: 'Benton Sans'; src: url('/fonts/v2.x/v2.0/benton/bentonsans-regular-webfont.woff') format('woff'); font-weight: normal; font-style: normal;font-display: swap; }
+@font-face { font-family: 'Benton Sans'; src: url('/fonts/v2.x/v2.0/benton/bentonsans-regularitalic-webfont.woff') format('woff'); font-weight: normal; font-style: italic;font-display: swap; }
+@font-face { font-family: 'Benton Sans'; src: url('/fonts/v2.x/v2.0/benton/bentonsans-light-webfont.woff') format('woff'); font-weight: 200; font-style: normal;font-display: swap; }
+@font-face { font-family: 'Benton Sans'; src: url('/fonts/v2.x/v2.0/benton/bentonsans-book-webfont.woff') format('woff'); font-weight: 100; font-style: normal;font-display: swap; }
+@font-face { font-family: 'Benton Sans'; src: url('/fonts/v2.x/v2.0/benton/bentonsans-medium-webfont.woff') format('woff'); font-weight: 500; font-style: normal;font-display: swap; }
+@font-face { font-family: 'Benton Sans'; src: url('/fonts/v2.x/v2.0/benton/bentonsans-bold-webfont.woff') format('woff'); font-weight: 700; font-style: normal;font-display: swap; }
+@font-face { font-family: 'Benton Sans'; src: url('/fonts/v2.x/v2.0/benton/bentonsans-bolditalic-webfont.woff') format('woff'); font-weight: 700; font-style: italic;font-display: swap; }
+@font-face { font-family: 'Benton Sans'; src: url('/fonts/v2.x/v2.0/benton/bentonsans-black-webfont.woff') format('woff'); font-weight: 900; font-style: normal;font-display: swap; }
+@font-face { font-family: 'Majrit-Banner'; src: url('/fonts/v2.x/v2.2/majrit/Majrit-Banner/Majrit-Banner-Light.woff') format('woff'); font-weight: 100; font-style: normal;font-display: swap; }
+@font-face { font-family: 'Majrit-Banner'; src: url('/fonts/v2.x/v2.2/majrit/Majrit-Banner/Majrit-Banner-Medium.woff') format('woff'); font-weight: 500; font-style: normal;font-display: swap; }
+@font-face { font-family: 'Majrit-Banner'; src: url('/fonts/v2.x/v2.2/majrit/Majrit-Banner/Majrit-Banner-Black.woff') format('woff'); font-weight: 900; font-style: italic;font-display: swap; }
+@font-face { font-family: 'Majrit-Banner'; src: url('/fonts/v2.x/v2.2/majrit/Majrit-Banner/Majrit-Banner-Bold.woff') format('woff'); font-weight: 700; font-style: normal;font-display: swap; }
+@font-face { font-family: 'Majrit-Deck'; src: url('/fonts/v2.x/v2.2/majrit/Majrit-Deck/Majrit-Deck-Light.woff') format('woff'); font-weight: 100; font-style: normal;font-display: swap; }
+@font-face { font-family: 'Majrit-Deck'; src: url('/fonts/v2.x/v2.2/majrit/Majrit-Deck/Majrit-Deck-Black.woff') format('woff'); font-weight: 900; font-style: normal;font-display: swap; }
+@font-face { font-family: 'Iconos Pais'; src: url('/fonts/v2.x/v2.0/ico/iconos-pais.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+body {
+	background: black;
+	color: white;
+}
+
+.main {
+  width: 100%;
+  overflow: hidden;
+}
+
+section {
+  max-width: 980px;
+  margin: 0 auto 40px;
+}
+
+section.co2,
+section.cambio,
+section.calentamiento,
+section.produccion {
+  margin-bottom: 0;
+}
+
+section.contador .contenido {
+  padding-top: 0;
+}
+
+section.imagen .contenido {
+  padding-top: 80px;
+}
+
+section.co2 .contenido,
+section.produccion .contenido {
+  padding-bottom: 0;
+}
+
+section.co2 > .contenido {
+  padding-top: 80px;
+}
+
+section:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.contenido {
+  padding: 40px 40px;
+}
+
+.intro {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	padding: 0;
+  max-width: none;
+  overflow: hidden;
+}
+
+.intro video {
+  width: 100%;
+  height: 64%;
+  object-fit: cover;
+}
+
+.intro:before {
+  content: '';
+  width: 100%; 
+  height: 40vh;
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
+  position: absolute;
+  bottom: 36vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.intro canvas {
+  width: 100%!important;
+  height: calc(100vh - 40px)!important;
+  object-fit: cover;
+}
+
+.intro_texto {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 80px);
+  max-width: 500px;
+  line-height: 120%;
+  opacity: 0.8;
+  text-align: center;
+  z-index: 1;
+}
+
+.intro_texto p {
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+.intro_texto p:nth-child(3) {
+  padding-bottom: 110px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 100%;
+}
+
+.cabecera {
+	width: 100%;
+	height: 40px;
+  border-top: 1px solid #89CAB1;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 15px;
+} 
+
+.cabecera .logo-pais {
+	text-indent: -9999px;
+	display: block;
+	width: 90px;
+	height: 30px;
+	background: url('/especiales/2019/el-co2-en-el-cambio-climatico/img/logo_elpais.svg') no-repeat left center;
+	background-size: 100% auto;
+	float: left;
+}
+
+.cabecera .cumbre {
+	text-indent: -9999px;
+	display: block;
+	width: 180px;
+	height: 30px;
+	background: url('/especiales/2019/el-co2-en-el-cambio-climatico/img/cumbre.svg') no-repeat left center;
+	background-size: 100% auto;
+	float: right;
+	margin-top: 2px;
+}
+
+.bajar {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  text-indent: -6666rem;
+  overflow: hidden;
+  background: url('/especiales/2019/el-co2-en-el-cambio-climatico/img/bajar.svg') no-repeat center / contain;
+  opacity: 0;
+  visibility: hidden;
+  animation: mostrar 1s forwards 1s, bajar 2s infinite;
+  cursor: pointer;
+  position: absolute;
+  z-index: 13;
+  bottom: 4rem;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.compartir {
+  margin-bottom: 0.625rem;
+}
+
+.compartir li {
+  display: inline-block;
+  vertical-align: middle;  
+  margin-left: 0.25rem;
+}
+
+.compartir a {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  text-indent: -666rem;
+  font-family: 'Iconos Pais';
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  position: relative;
+  border-radius: 50%;
+  border: 0.125rem solid transparent;
+}
+
+.compartir a:before {
+  display: block;
+  text-indent: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.compartir a.facebook {
+  font-size: 1.7rem;
+  line-height: 1.75rem;
+}
+.compartir a.facebook:before {
+  content: "\e902";
+}
+
+.compartir a.twitter:before {
+  content: "\e90a";
+}
+
+.grafico-quees-movil {
+  margin-bottom: 2rem;
+}
+
+.grafico-quees-escritorio {
+  display: none;
+}
+
+h2 {
+	font-size: 36px;
+  line-height: 120%;
+  font-family: "Majrit-Banner", serif;
+	font-weight: 900;
+  text-align: left;
+	position: relative;
+	margin-bottom: 60px;
+  text-align: left;
+}
+
+h2:before {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+  height: 1px;
+	width: 100px;
+	background: #89CAB1;
+	content: "";
+	z-index: 1;
+}
+
+h2 span {
+	font-weight: 100;
+	display: block;
+}
+
+h3 {
+  color: #89CAB1;
+	font-size: 30px;
+  line-height: 120%;
+  font-family: "Majrit-Banner", serif;
+	font-weight: 900;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+section p,
+.creditos p,
+.fuentes p {
+  font-family: "Majrit-Deck", serif;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 100;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.fuentes p a {
+  color: #9B9B9B;
+  text-decoration: underline;
+}
+
+section p {
+  color: #9B9B9B;
+}
+
+.visual p {
+  max-width: 35.625rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.creditos p {
+  line-height: 150%;
+  margin-bottom: 0;
+}
+
+.fuentes p {
+  line-height: 150%;
+  margin-bottom: 10px;
+}
+
+section p strong {
+  font-weight: 900;
+}
+
+section p strong.destacado {
+  color: #89DCB1;
+}
+
+.imagen {
+  text-align: center;
+} 
+
+.contador {
+  text-align: center;
+}
+
+.contador p:nth-child(1) {
+  font-weight: 100;
+  font-size: 24px;
+  margin-bottom: 20px;
+  display: inline-block;
+  max-width: none;
+  width: 100%;
+  margin-bottom: 80px;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.contador p:nth-child(1) strong {
+  font-size: 65px;
+  font-weight: 900;
+  display: block;
+  color:#fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.visual.texto {
+
+}
+
+.visual.texto {
+  clear:both;
+}
+
+.visual.texto p {
+  width: 100%;
+}
+
+.fuentes {
+  background: rgba(255,255,255,0.1);
+  padding: 30px 20px;
+  color:#fff;
+  width: 90%;
+  max-width: 850px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.fuentes span {
+  font-family: "Majrit-Deck", serif;
+  font-weight: 900;
+  font-size: 18px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.fuentes p {
+  font-family: "Majrit-Deck", serif;
+  font-weight: 100;
+  font-size: 16px;
+  width: 100%;
+  padding-bottom: 10px;
+  line-height: 130%;
+  text-align: left;
+}
+
+.fuentes p {
+  line-height: 150%;
+}
+
+.creditos {
+  text-align:center;
+  margin: 60px auto 60px;
+  width: 90%;
+  max-width: 540px;
+  padding: 0;
+}
+
+.creditos span {
+  font-family: "Majrit-Deck", serif;
+  font-weight: 900;
+  font-size: 14px;
+  color:#fff;
+}
+
+.creditos .creditos_titulo{
+  text-transform: uppercase;
+  letter-spacing: -0.24px;
+  position: relative;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.creditos .creditos_titulo:before {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  content:"";
+  z-index: 1;
+  width: 50px;
+  height: 1px;
+  background:#89CAB1;
+}
+
+.creditos p {
+  font-family: "Majrit-Deck", serif;
+  font-weight: 100;
+  font-size: 14px;
+  width: 100%;
+  letter-spacing: -0.24px;
+  color:#fff;
+  padding-bottom: 1px;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+.ochenta .contentFixedElement img {
+  object-fit: contain;
+  height: 100vh;
+  max-width: 90%;
+  margin: 0 5%;
+}
+
+.ochenta .contentFixedElement {
+  max-width: 980px;
+}
+
+.ochenta .content-img-fixed {
+  max-width: 980px;
+  width: 100%;
+}
+
+.ochenta .fixed_top .content-img-fixed, 
+.ochenta .fixed_top,
+.ochenta .block-fixed {
+  width: 100%;
+  max-width: 980px;
+}
+
+.ochenta .text-fixed p {
+  width: 100%;
+  padding: 0;
+}
+
+.ochenta .text-fixed span { 
+  font-family: "Majrit-Deck", serif;
+  color: black;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 100;
+  margin-bottom: 40px;
+  text-align: left;
+  width: 100%;
+  max-width: 360px; 
+  background: rgb(205,233,202); 
+  background: -moz-linear-gradient(left,  rgba(205,233,202,1) 0%, rgba(135,201,177,1) 100%); 
+  background: -webkit-linear-gradient(left,  rgba(205,233,202,1) 0%,rgba(135,201,177,1) 100%);
+  background: linear-gradient(to right,  rgba(205,233,202,1) 0%,rgba(135,201,177,1) 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cde9ca', endColorstr='#87c9b1',GradientType=1 ); 
+}
+
+.swiper-button-prev, 
+.swiper-button-next {
+  display: none !important;
+}
+
+.co2 #g-almacenamientoco2-box {
+  clear: both;
+  margin-left: -40px;
+  margin-right: -40px;
+  width: calc(100% + 80px);
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+@media(min-width:768px) { /* TABLETA */
+
+  section {
+    text-align: left;
+    max-width: 980px;
+    margin: 0 auto 40px;
+  }
+
+  .cabecera {
+    height: 60px;
+  }
+
+  .cabecera .logo-pais {
+    width: 111px;
+    margin: 14px 0 0 20px;
+  }
+
+  .cabecera .cumbre {
+    width: 216px;
+    margin: 16px 20px 0 0;
+  }
+  
+  h2 {
+    text-align: left;
+    font-size: 44px;
+    margin-bottom: 70px;
+  }
+
+  h2:before {
+    left: 0;
+    transform: none;
+    width: 60px;
+  }
+
+  section p {
+    font-size: 20px;
+    width: 48%;
+  }
+  
+  .visual p {
+    width: 100%;
+  }
+
+  .columnas p {
+    float: left;
+    width: 48%
+  } 
+
+  .columnas p:nth-child(2) {
+    float: right;
+  }
+
+  .izquierda {
+    float: left;
+  }
+
+  .derecha {
+    float: right;
+  }
+
+  .centro {
+    width: 100%;
+  }
+  
+  .contador p:nth-child(2) {
+    width: 100%;
+  }
+
+  .contador p:nth-child(1) {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color:#fff;
+  }
+
+  .contador p:nth-child(1) strong {
+    font-size: 122px;
+    padding-bottom: 0;
+  }
+
+  .co2 h2,
+  .produccion h2 {
+    float: left;
+  }
+
+  .co2 .derecha,
+  .produccion .derecha {
+    width: 64%;
+  }
+
+  .creditos span,
+  .creditos p {
+    font-size: 16px;
+  }
+
+  .text-fixed span {
+    max-width: 250px;
+    display: block;    
+  }
+
+} /* /TABLETA */
+
+@media(min-width:1024px) { /* ESCRITORIO */
+
+  h2 {
+    text-align: left;
+    font-size: 50px;
+    margin-bottom: 70px;
+  }
+
+  h2:before {
+    left: 0;
+    transform: none;
+    width: 60px;
+  }
+
+  .intro:before {
+    bottom: 0;
+  }
+  
+  .intro video {
+    height: 100%;
+  }
+  
+  section p {
+    font-size: 20px;
+    width: 48%;
+  }
+
+  .contador p:nth-child(1) {
+    font-size: 50px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding: 10vh 0;
+  }
+
+  .contador p:nth-child(1) strong {
+    font-size: 210px;
+    line-height: 210px;
+  }
+
+  .contentFixedElement img { object-fit: contain; margin: 0; }
+  .ochenta .contentFixedElement img { max-width: 100%; margin: 0 auto; }
+  
+  .text-fixed span {
+    max-width: 360px;
+    display: block;    
+   }
+
+   .fuentes {
+     padding: 60px;
+   }
+
+  .grafico-quees-movil {
+    display: none;
+  }
+
+  .grafico-quees-escritorio {
+    display: block;
+    margin-bottom: 120px;
+    margin-top: 50px;
+  }
+  
+  section.imagen .contenido {
+    padding: 110px 0 60px;
+  }
+  
+  #g-particulas-box {
+    margin-bottom: 50px;
+  }
+  
+  .co2 #g-almacenamientoco2-box {
+    padding-top: 100px;
+    margin-bottom: 110px;
+  }
+
+} /* /ESCRITORIO */
+
+@media (max-width:768px){ /* MOVIL */
+  .ochenta .contentFixedElement,
+  .ochenta .contentFixedElement.w980,
+  .ochenta .contentFixedElement.w980 .content-img-fixed,
+  .ochenta .contentFixedElement.w640,
+  .ochenta .contentFixedElement.w640 .content-img-fixed {
+    width: 100%;
+  }
+  
+  .visual .contenido {
+    padding: 0;
+  }
+  
+  .ochenta .text-fixed span {
+    margin-bottom: -300px;
+  }
+  
+  .ochenta .contentFixedElement {
+    padding-bottom: 600px;
+  }
+  
+} /* /MOVIL */
+
+/* ANIMACIONES */
+@keyframes mostrar {
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes bajar {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
